@@ -168,12 +168,6 @@ export default function ContactFooter() {
               <WhatsAppIcon className="w-4 h-4" />
               Chat on WhatsApp
             </a>
-            <a
-              href="#demo"
-              className="flex items-center justify-center bg-accent hover:bg-accent-dark text-white font-semibold px-5 py-2.5 rounded-xl transition-colors text-sm"
-            >
-              Book Free Demo
-            </a>
           </div>
         </div>
       </div>

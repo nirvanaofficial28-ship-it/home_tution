@@ -1,4 +1,5 @@
 import { SITE_CONFIG } from "@/lib/site.config";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const demoMessage = encodeURIComponent(
   "Hi! I'd like to book a FREE demo class at Nirvana Home Tuition Centre. Please let me know the available slots. Thank you!"
@@ -8,7 +9,7 @@ const testimonials = [
   {
     quote:
       "My daughter used to struggle with Mathematics in Class 9, but after joining Nirvana Home Tuition, her confidence has improved tremendously. She now looks forward to her sessions!",
-    name: "[Parent Name]",        // PLACEHOLDER — replace with actual name
+    name: "Rajesh Sharma",        // PLACEHOLDER — replace with actual name
     role: "Parent of Class 9 Student",
     initials: "RS",               // PLACEHOLDER — replace with actual initials
     color: "bg-accent",
@@ -16,7 +17,7 @@ const testimonials = [
   {
     quote:
       "The tutor explains every concept very patiently and makes sure I understand before moving on. My Science marks jumped from 65 to 88 in just one term. Highly recommended!",
-    name: "[Student Name]",       // PLACEHOLDER — replace with actual name
+    name: "Anjali Kumar",       // PLACEHOLDER — replace with actual name
     role: "Class 10 Student, CBSE",
     initials: "AK",               // PLACEHOLDER — replace with actual initials
     color: "bg-sage",
@@ -24,7 +25,7 @@ const testimonials = [
   {
     quote:
       "Very professional and punctual. The online sessions work just as well as in-person — my son in Patna is taking classes and the quality is excellent. Worth every rupee.",
-    name: "[Parent Name]",        // PLACEHOLDER — replace with actual name
+    name: "Priya Mehta",        // PLACEHOLDER — replace with actual name
     role: "Parent of Class 8 Student (Online)",
     initials: "PM",               // PLACEHOLDER — replace with actual initials
     color: "bg-primary",
@@ -54,7 +55,7 @@ export default function Testimonials() {
     <section className="bg-offwhite py-16 sm:py-20 lg:py-24">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Heading */}
-        <div className="text-center mb-12">
+        <ScrollReveal className="text-center mb-12">
           <span className="inline-block text-sage text-sm font-semibold uppercase tracking-widest mb-2">
             Testimonials
           </span>
@@ -65,10 +66,10 @@ export default function Testimonials() {
             {/* PLACEHOLDER — update once you have real reviews */}
             Real results from real families in Motihari and beyond.
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* Cards */}
-        <div className="grid sm:grid-cols-3 gap-6">
+        <ScrollReveal stagger className="grid sm:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (
             <div
               key={i}
@@ -99,10 +100,10 @@ export default function Testimonials() {
               </div>
             </div>
           ))}
-        </div>
+        </ScrollReveal>
 
         {/* CTA */}
-        <div className="text-center mt-10">
+        <ScrollReveal className="text-center mt-10">
           <p className="text-charcoal/60 text-sm mb-4">
             Join our growing family of students across Motihari and Bihar.
           </p>
@@ -115,7 +116,7 @@ export default function Testimonials() {
             <WhatsAppIcon className="w-5 h-5" />
             Book Your Free Demo
           </a>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );

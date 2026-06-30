@@ -1,3 +1,5 @@
+import ScrollReveal from "@/components/ScrollReveal";
+
 const pillars = [
   {
     icon: StudentPillarIcon,
@@ -28,7 +30,7 @@ export default function About() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
         {/* Section heading */}
-        <div className="text-center mb-12">
+        <ScrollReveal className="text-center mb-12">
           <span className="inline-block text-sage text-sm font-semibold uppercase tracking-widest mb-2">
             About Us
           </span>
@@ -41,10 +43,10 @@ export default function About() {
             who need personalised guidance and tutors who have the expertise but
             lack the connections to reach them.
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* Three pillars */}
-        <div className="grid sm:grid-cols-3 gap-6 mb-14">
+        <ScrollReveal stagger className="grid sm:grid-cols-3 gap-6 mb-14">
           {pillars.map((p) => (
             <div key={p.title} className="bg-white rounded-2xl border border-charcoal/8 p-6 shadow-sm hover:shadow-md transition-shadow">
               <div className={`w-12 h-12 rounded-xl ${p.bg} ${p.color} flex items-center justify-center mb-4`}>
@@ -54,10 +56,10 @@ export default function About() {
               <p className="text-charcoal/70 text-sm leading-relaxed">{p.desc}</p>
             </div>
           ))}
-        </div>
+        </ScrollReveal>
 
         {/* Founder strip */}
-        <div className="bg-primary rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-6">
+        <ScrollReveal className="bg-primary rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-6">
           {/*
             PLACEHOLDER — Replace the avatar div below with an <img> of the founder.
             Recommended: 200×200px, circular crop.
@@ -81,7 +83,7 @@ export default function About() {
               the expertise but lack the connections to reach them.
             </p>
           </div>
-        </div>
+        </ScrollReveal>
 
       </div>
     </section>

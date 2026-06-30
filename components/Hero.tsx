@@ -1,5 +1,12 @@
 import { SITE_CONFIG } from "@/lib/site.config";
 
+const hindiQuotes = [
+  { text: "गुरु बिना ज्ञान कहाँ",          meaning: "Without a teacher, where is knowledge?" },
+  { text: "ज्ञान ही सबसे बड़ा धन है",       meaning: "Knowledge is the greatest wealth" },
+  { text: "पढ़ोगे तो आगे बढ़ोगे",            meaning: "Study today, lead tomorrow" },
+  { text: "शिक्षा से बड़ा कोई वरदान नहीं",  meaning: "No blessing greater than education" },
+];
+
 const whatsappHello = encodeURIComponent(
   "Hi! I'd like to know more about Nirvana Home Tuition Centre — connecting students and tutors."
 );
@@ -29,17 +36,48 @@ export default function Hero() {
 
           {/* ── Text column ── */}
           <div>
-            <div className="inline-flex items-center gap-2 bg-white/10 text-white/90 text-sm px-4 py-1.5 rounded-full mb-6 border border-white/20">
+            <div
+              className="hero-up inline-flex items-center gap-2 bg-white/10 text-white/90 text-sm px-4 py-1.5 rounded-full mb-6 border border-white/20"
+              style={{ animationDelay: "0ms" }}
+            >
               <span className="w-2 h-2 rounded-full bg-sage inline-block" />
               Motihari&apos;s Tuition Network
             </div>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-5">
+            <h1
+              className="hero-up text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4"
+              style={{ animationDelay: "100ms" }}
+            >
               Find a Tutor.<br />
               <span className="text-accent">Become a Tutor.</span>
             </h1>
 
-            <p className="text-white/75 text-base sm:text-lg leading-relaxed mb-8">
+            {/* Cycling Hindi quotes */}
+            <div
+              className="hero-up relative h-12 mb-5 overflow-hidden"
+              style={{ animationDelay: "200ms" }}
+              aria-hidden="true"
+            >
+              {hindiQuotes.map((q, i) => (
+                <div
+                  key={q.text}
+                  className="hindi-quote flex items-baseline gap-2"
+                  style={{ animationDelay: `${i * 4}s` }}
+                >
+                  <span className="text-accent text-base sm:text-lg font-semibold">
+                    ❝ {q.text} ❞
+                  </span>
+                  <span className="text-white/45 text-xs hidden sm:inline">
+                    — {q.meaning}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            <p
+              className="hero-up text-white/75 text-base sm:text-lg leading-relaxed mb-8"
+              style={{ animationDelay: "300ms" }}
+            >
               Nirvana Home Tuition Centre connects{" "}
               <strong className="text-white/95">students needing quality home or online tuition</strong>{" "}
               with{" "}
@@ -48,7 +86,10 @@ export default function Hero() {
             </p>
 
             {/* Dual CTA */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-8">
+            <div
+              className="hero-up flex flex-col sm:flex-row gap-4 mb-8"
+              style={{ animationDelay: "420ms" }}
+            >
               <a
                 href="#enquire"
                 className="flex items-center justify-center gap-2 bg-accent hover:bg-accent-dark text-white font-semibold px-6 py-3.5 rounded-xl transition-colors duration-200 text-base shadow-lg"
@@ -69,14 +110,18 @@ export default function Hero() {
               href={`https://wa.me/${SITE_CONFIG.whatsappNumber}?text=${whatsappHello}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-white/70 hover:text-white text-sm transition-colors"
+              className="hero-up inline-flex items-center gap-2 text-white/70 hover:text-white text-sm transition-colors"
+              style={{ animationDelay: "520ms" }}
             >
               <WhatsAppIcon className="w-4 h-4 text-whatsapp" />
               Or chat with us directly on WhatsApp
             </a>
 
             {/* Trust stats */}
-            <div className="flex flex-wrap gap-6 mt-10 pt-8 border-t border-white/10">
+            <div
+              className="hero-up flex flex-wrap gap-6 mt-10 pt-8 border-t border-white/10"
+              style={{ animationDelay: "620ms" }}
+            >
               {[
                 { value: "Classes 1–12", label: "All grades covered" },
                 { value: "All Subjects", label: "Every school subject" },
@@ -91,8 +136,13 @@ export default function Hero() {
           </div>
 
           {/* ── Illustration ── */}
-          <div className="hidden md:flex justify-center items-center">
-            <PlatformIllustration />
+          <div
+            className="hero-right hidden md:flex justify-center items-center"
+            style={{ animationDelay: "150ms" }}
+          >
+            <div className="hero-float">
+              <PlatformIllustration />
+            </div>
           </div>
         </div>
       </div>

@@ -1,3 +1,5 @@
+import ScrollReveal from "@/components/ScrollReveal";
+
 const gradeRanges = [
   {
     level: "Primary",
@@ -52,7 +54,7 @@ export default function Subjects() {
     <section id="subjects" className="bg-lightblue py-16 sm:py-20 lg:py-24">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Heading */}
-        <div className="text-center mb-12">
+        <ScrollReveal className="text-center mb-12">
           <span className="inline-block text-sage text-sm font-semibold uppercase tracking-widest mb-2">
             Subjects &amp; Grades
           </span>
@@ -76,10 +78,10 @@ export default function Subjects() {
               </span>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
 
         {/* Grade cards grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <ScrollReveal stagger className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {gradeRanges.map((range) => (
             <div
               key={range.level}
@@ -118,10 +120,10 @@ export default function Subjects() {
               </div>
             </div>
           ))}
-        </div>
+        </ScrollReveal>
 
         {/* CTA below grid */}
-        <div className="text-center mt-10">
+        <ScrollReveal className="text-center mt-10">
           <p className="text-charcoal/70 mb-4">
             Don&apos;t see your subject?{" "}
             <strong className="text-primary">
@@ -134,7 +136,7 @@ export default function Subjects() {
           >
             Ask Us Directly
           </a>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );
