@@ -3,8 +3,7 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Subjects from "@/components/Subjects";
 import TeachingMode from "@/components/TeachingMode";
-import Pricing from "@/components/Pricing";
-import DemoForm from "@/components/DemoForm";
+import EnquirySection from "@/components/DemoForm";
 import Testimonials from "@/components/Testimonials";
 import CareerCounselling from "@/components/CareerCounselling";
 import ContactFooter from "@/components/ContactFooter";
@@ -19,8 +18,7 @@ export default function Home() {
         <About />
         <Subjects />
         <TeachingMode />
-        <Pricing />
-        <DemoForm />
+        <EnquirySection />
         <Testimonials />
         <CareerCounselling />
       </main>

@@ -7,7 +7,7 @@ const navLinks = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Subjects", href: "#subjects" },
-  { label: "Pricing", href: "#pricing" },
+  { label: "For Tutors", href: "#enquire" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -56,10 +56,10 @@ export default function Header() {
             </a>
           ))}
           <a
-            href="#demo"
+            href="#enquire"
             className="bg-accent hover:bg-accent-dark text-white text-sm font-semibold px-5 py-2 rounded-lg transition-colors duration-150 whitespace-nowrap"
           >
-            Book Free Demo
+            Enquire Now
           </a>
         </nav>
 
@@ -119,11 +119,11 @@ export default function Header() {
               </a>
             ))}
             <a
-              href="#demo"
+              href="#enquire"
               onClick={closeMenu}
               className="block mt-4 bg-accent hover:bg-accent-dark text-white text-center font-semibold px-4 py-3 rounded-lg transition-colors"
             >
-              Book Free Demo
+              Enquire Now
             </a>
             <a
               href={`https://wa.me/${SITE_CONFIG.whatsappNumber}`}

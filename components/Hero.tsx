@@ -1,7 +1,7 @@
 import { SITE_CONFIG } from "@/lib/site.config";
 
 const whatsappHello = encodeURIComponent(
-  "Hi! I'm interested in home tuition at Nirvana Home Tuition Centre. Please share more details."
+  "Hi! I'd like to know more about Nirvana Home Tuition Centre — connecting students and tutors."
 );
 
 export default function Hero() {
@@ -10,7 +10,7 @@ export default function Hero() {
       id="home"
       className="relative bg-primary overflow-hidden pt-20 min-h-screen flex items-center"
     >
-      {/* Decorative dot-grid background */}
+      {/* Dot-grid background */}
       <div
         className="absolute inset-0 opacity-[0.07]"
         style={{
@@ -20,85 +20,79 @@ export default function Hero() {
         }}
         aria-hidden="true"
       />
-
-      {/* Decorative gradient orbs */}
-      <div
-        className="absolute top-20 right-0 w-80 h-80 bg-accent opacity-10 rounded-full blur-3xl -translate-y-10 translate-x-20"
-        aria-hidden="true"
-      />
-      <div
-        className="absolute bottom-10 left-0 w-64 h-64 bg-sage opacity-10 rounded-full blur-3xl translate-y-10 -translate-x-20"
-        aria-hidden="true"
-      />
+      {/* Gradient orbs */}
+      <div className="absolute top-20 right-0 w-80 h-80 bg-accent opacity-10 rounded-full blur-3xl -translate-y-10 translate-x-20" aria-hidden="true" />
+      <div className="absolute bottom-10 left-0 w-64 h-64 bg-sage opacity-10 rounded-full blur-3xl translate-y-10 -translate-x-20" aria-hidden="true" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24 w-full">
         <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
+
           {/* ── Text column ── */}
           <div>
-            {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-white/10 text-white/90 text-sm px-4 py-1.5 rounded-full mb-6 border border-white/20">
               <span className="w-2 h-2 rounded-full bg-sage inline-block" />
-              Motihari&apos;s Trusted Tutoring Centre
+              Motihari&apos;s Tuition Network
             </div>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-5">
-              Home Tutor for{" "}
-              <span className="text-accent">Classes&nbsp;1–12</span> —{" "}
-              <span className="whitespace-nowrap">Online &amp;</span>{" "}
-              In-Person in{" "}
-              <span className="text-accent">Motihari</span>
+              Find a Tutor.<br />
+              <span className="text-accent">Become a Tutor.</span>
             </h1>
 
             <p className="text-white/75 text-base sm:text-lg leading-relaxed mb-8">
-              All subjects · CBSE, ICSE &amp; State Board · Expert guidance at
-              home or online · Personalised attention · Affordable fees.{" "}
-              <strong className="text-white/95 font-semibold">
-                Book a free demo class today
-              </strong>{" "}
-              and experience the difference.
+              Nirvana Home Tuition Centre connects{" "}
+              <strong className="text-white/95">students needing quality home or online tuition</strong>{" "}
+              with{" "}
+              <strong className="text-white/95">qualified tutors looking for students</strong>{" "}
+              — across Motihari and beyond. Classes&nbsp;1–12 · All subjects · CBSE, ICSE &amp; State Board.
             </p>
 
-            {/* CTA buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            {/* Dual CTA */}
+            <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <a
-                href={`https://wa.me/${SITE_CONFIG.whatsappNumber}?text=${whatsappHello}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2.5 bg-whatsapp hover:bg-green-500 text-white font-semibold px-6 py-3.5 rounded-xl transition-colors duration-200 text-base shadow-lg"
+                href="#enquire"
+                className="flex items-center justify-center gap-2 bg-accent hover:bg-accent-dark text-white font-semibold px-6 py-3.5 rounded-xl transition-colors duration-200 text-base shadow-lg"
               >
-                <WhatsAppIcon className="w-5 h-5 flex-shrink-0" />
-                Chat on WhatsApp
+                <StudentIcon className="w-5 h-5 flex-shrink-0" />
+                I Need a Tutor
               </a>
               <a
-                href="#demo"
-                className="flex items-center justify-center bg-accent hover:bg-accent-dark text-white font-semibold px-6 py-3.5 rounded-xl transition-colors duration-200 text-base shadow-lg"
+                href="#enquire"
+                className="flex items-center justify-center gap-2 bg-white/15 hover:bg-white/25 border border-white/30 text-white font-semibold px-6 py-3.5 rounded-xl transition-colors duration-200 text-base"
               >
-                Book a Free Demo Class
+                <TeacherIcon className="w-5 h-5 flex-shrink-0" />
+                I Want to Tutor
               </a>
             </div>
 
-            {/* Trust signals */}
-            <div className="flex flex-wrap gap-6 mt-10">
+            <a
+              href={`https://wa.me/${SITE_CONFIG.whatsappNumber}?text=${whatsappHello}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-white/70 hover:text-white text-sm transition-colors"
+            >
+              <WhatsAppIcon className="w-4 h-4 text-whatsapp" />
+              Or chat with us directly on WhatsApp
+            </a>
+
+            {/* Trust stats */}
+            <div className="flex flex-wrap gap-6 mt-10 pt-8 border-t border-white/10">
               {[
-                { value: "Classes 1–12", label: "All Grades" },
-                { value: "All Subjects", label: "Covered" },
-                { value: "CBSE / ICSE", label: "& State Board" },
+                { value: "Classes 1–12", label: "All grades covered" },
+                { value: "All Subjects", label: "Every school subject" },
+                { value: "Home + Online", label: "Both modes available" },
               ].map((stat) => (
-                <div key={stat.label} className="text-center">
-                  <div className="text-accent font-bold text-lg sm:text-xl">
-                    {stat.value}
-                  </div>
-                  <div className="text-white/60 text-xs sm:text-sm">
-                    {stat.label}
-                  </div>
+                <div key={stat.label}>
+                  <div className="text-accent font-bold text-base sm:text-lg">{stat.value}</div>
+                  <div className="text-white/55 text-xs sm:text-sm">{stat.label}</div>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* ── Illustration column ── */}
+          {/* ── Illustration ── */}
           <div className="hidden md:flex justify-center items-center">
-            <EducationIllustration />
+            <PlatformIllustration />
           </div>
         </div>
       </div>
@@ -106,115 +100,75 @@ export default function Hero() {
   );
 }
 
-function EducationIllustration() {
+function PlatformIllustration() {
   return (
-    <svg
-      viewBox="0 0 420 420"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className="w-full max-w-sm lg:max-w-md drop-shadow-xl"
-      aria-hidden="true"
-    >
-      {/* Outer glow circle */}
+    <svg viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg"
+      className="w-full max-w-sm lg:max-w-md drop-shadow-xl" aria-hidden="true">
       <circle cx="210" cy="210" r="190" fill="white" fillOpacity="0.04" />
-      <circle cx="210" cy="210" r="160" fill="white" fillOpacity="0.04" />
+      <circle cx="210" cy="210" r="155" fill="white" fillOpacity="0.04" />
 
-      {/* ── Open Book ── */}
-      {/* Left page */}
-      <path
-        d="M100 260 C100 255 105 248 115 245 L200 225 L200 320 L115 338 C108 340 100 334 100 327 Z"
-        fill="white"
-        fillOpacity="0.92"
-      />
-      {/* Right page */}
-      <path
-        d="M200 225 L285 245 C295 248 300 255 300 260 L300 327 C300 334 292 340 285 338 L200 320 Z"
-        fill="#EAF1F6"
-        fillOpacity="0.92"
-      />
-      {/* Spine */}
-      <line x1="200" y1="225" x2="200" y2="320" stroke="#1F3A5F" strokeWidth="2" strokeOpacity="0.3" />
+      {/* Central node */}
+      <circle cx="210" cy="210" r="36" fill="#F2A93B" fillOpacity="0.2" />
+      <circle cx="210" cy="210" r="22" fill="#F2A93B" fillOpacity="0.9" />
+      <path d="M200 210 h20 M210 200 v20" stroke="white" strokeWidth="3" strokeLinecap="round" />
 
-      {/* Left page lines */}
-      <line x1="120" y1="268" x2="188" y2="256" stroke="#1F3A5F" strokeWidth="1.5" strokeOpacity="0.2" strokeLinecap="round" />
-      <line x1="120" y1="280" x2="188" y2="268" stroke="#1F3A5F" strokeWidth="1.5" strokeOpacity="0.2" strokeLinecap="round" />
-      <line x1="120" y1="292" x2="188" y2="280" stroke="#1F3A5F" strokeWidth="1.5" strokeOpacity="0.2" strokeLinecap="round" />
-      <line x1="120" y1="304" x2="188" y2="292" stroke="#1F3A5F" strokeWidth="1.5" strokeOpacity="0.2" strokeLinecap="round" />
-      <line x1="120" y1="316" x2="165" y2="307" stroke="#1F3A5F" strokeWidth="1.5" strokeOpacity="0.2" strokeLinecap="round" />
+      {/* Student node (left) */}
+      <circle cx="90" cy="210" r="44" fill="white" fillOpacity="0.08" />
+      <circle cx="90" cy="210" r="30" fill="#4C8C6B" fillOpacity="0.85" />
+      <circle cx="90" cy="202" r="8" fill="white" fillOpacity="0.9" />
+      <path d="M72 226 C72 218 80 213 90 213 C100 213 108 218 108 226" fill="white" fillOpacity="0.9" />
+      <rect x="52" y="248" width="76" height="22" rx="11" fill="white" fillOpacity="0.12" />
+      <text x="90" y="263" textAnchor="middle" fill="white" fontSize="10" fontWeight="600" opacity="0.9">STUDENT</text>
 
-      {/* Right page lines */}
-      <line x1="212" y1="258" x2="280" y2="270" stroke="#1F3A5F" strokeWidth="1.5" strokeOpacity="0.2" strokeLinecap="round" />
-      <line x1="212" y1="270" x2="280" y2="282" stroke="#1F3A5F" strokeWidth="1.5" strokeOpacity="0.2" strokeLinecap="round" />
-      <line x1="212" y1="282" x2="280" y2="294" stroke="#1F3A5F" strokeWidth="1.5" strokeOpacity="0.2" strokeLinecap="round" />
-      <line x1="212" y1="294" x2="280" y2="306" stroke="#1F3A5F" strokeWidth="1.5" strokeOpacity="0.2" strokeLinecap="round" />
-      <line x1="212" y1="306" x2="255" y2="313" stroke="#1F3A5F" strokeWidth="1.5" strokeOpacity="0.2" strokeLinecap="round" />
+      {/* Tutor node (right) */}
+      <circle cx="330" cy="210" r="44" fill="white" fillOpacity="0.08" />
+      <circle cx="330" cy="210" r="30" fill="#1F3A5F" fillOpacity="0.9" stroke="white" strokeWidth="1.5" strokeOpacity="0.3" />
+      <ellipse cx="330" cy="208" rx="14" ry="4" fill="white" fillOpacity="0.9" />
+      <path d="M330 196 L344 208 L316 208 Z" fill="white" fillOpacity="0.85" />
+      <circle cx="330" cy="194" r="3" fill="#F2A93B" />
+      <rect x="296" y="248" width="68" height="22" rx="11" fill="white" fillOpacity="0.12" />
+      <text x="330" y="263" textAnchor="middle" fill="white" fontSize="10" fontWeight="600" opacity="0.9">TUTOR</text>
 
-      {/* ── Graduation Cap ── */}
-      {/* Board */}
-      <ellipse cx="210" cy="158" rx="65" ry="10" fill="#F2A93B" fillOpacity="0.95" />
-      {/* Hat top */}
-      <path d="M210 115 L275 158 L145 158 Z" fill="white" fillOpacity="0.9" />
-      {/* Button on top */}
-      <circle cx="210" cy="112" r="7" fill="#F2A93B" />
-      {/* Tassel string */}
-      <line x1="270" y1="155" x2="270" y2="190" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeOpacity="0.85" />
-      {/* Tassel end */}
-      <rect x="262" y="188" width="16" height="8" rx="4" fill="#4C8C6B" fillOpacity="0.9" />
+      {/* Connection lines */}
+      <line x1="120" y1="210" x2="172" y2="210" stroke="white" strokeWidth="2" strokeOpacity="0.3" strokeDasharray="5 4" />
+      <line x1="248" y1="210" x2="300" y2="210" stroke="white" strokeWidth="2" strokeOpacity="0.3" strokeDasharray="5 4" />
 
-      {/* ── Floating subject icons ── */}
+      {/* Subject bubbles */}
+      {([
+        { cx: 210, cy: 105, label: "Maths" },
+        { cx: 140, cy: 140, label: "Science" },
+        { cx: 280, cy: 140, label: "English" },
+        { cx: 150, cy: 290, label: "Hindi" },
+        { cx: 270, cy: 290, label: "Social" },
+        { cx: 210, cy: 320, label: "Commerce" },
+      ] as const).map((b) => (
+        <g key={b.label}>
+          <circle cx={b.cx} cy={b.cy} r="24" fill="white" fillOpacity="0.08" />
+          <text x={b.cx} y={b.cy + 4} textAnchor="middle" fill="white" fontSize="9" fontWeight="500" opacity="0.7">{b.label}</text>
+        </g>
+      ))}
 
-      {/* Pencil (top-left) */}
-      <g transform="translate(68, 130) rotate(-30)">
-        <rect x="0" y="0" width="8" height="36" rx="2" fill="#F2A93B" fillOpacity="0.85" />
-        <polygon points="0,36 8,36 4,46" fill="#222831" fillOpacity="0.6" />
-        <rect x="0" y="0" width="8" height="7" rx="2" fill="white" fillOpacity="0.7" />
-      </g>
+      <circle cx="60" cy="130" r="4" fill="#F2A93B" fillOpacity="0.7" />
+      <circle cx="360" cy="300" r="5" fill="#4C8C6B" fillOpacity="0.6" />
+      <circle cx="355" cy="130" r="3" fill="white" fillOpacity="0.5" />
+      <circle cx="65" cy="310" r="4" fill="#F2A93B" fillOpacity="0.5" />
+    </svg>
+  );
+}
 
-      {/* Calculator (top-right) */}
-      <g transform="translate(322, 118)">
-        <rect x="0" y="0" width="36" height="46" rx="5" fill="#4C8C6B" fillOpacity="0.8" />
-        <rect x="5" y="5" width="26" height="12" rx="2" fill="white" fillOpacity="0.9" />
-        {[0,1,2].map((col) =>
-          [0,1,2].map((row) => (
-            <rect
-              key={`${col}-${row}`}
-              x={5 + col * 9}
-              y={22 + row * 7}
-              width="6"
-              height="5"
-              rx="1"
-              fill="white"
-              fillOpacity="0.7"
-            />
-          ))
-        )}
-      </g>
+function StudentIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+    </svg>
+  );
+}
 
-      {/* Globe (bottom-right) */}
-      <g transform="translate(320, 270)">
-        <circle cx="22" cy="22" r="22" fill="#1F3A5F" fillOpacity="0.7" stroke="white" strokeWidth="1.5" strokeOpacity="0.4" />
-        <ellipse cx="22" cy="22" rx="10" ry="22" fill="none" stroke="white" strokeWidth="1" strokeOpacity="0.4" />
-        <line x1="0" y1="22" x2="44" y2="22" stroke="white" strokeWidth="1" strokeOpacity="0.4" />
-        <line x1="3" y1="11" x2="41" y2="11" stroke="white" strokeWidth="1" strokeOpacity="0.3" />
-        <line x1="3" y1="33" x2="41" y2="33" stroke="white" strokeWidth="1" strokeOpacity="0.3" />
-      </g>
-
-      {/* Flask / Science (bottom-left) */}
-      <g transform="translate(62, 278)">
-        <path d="M12 0 L12 18 L2 38 C0 42 3 46 7 46 L29 46 C33 46 36 42 34 38 L24 18 L24 0 Z" fill="#F2A93B" fillOpacity="0.75" />
-        <path d="M6 32 C6 32 15 36 30 30 L34 38 C36 42 33 46 29 46 L7 46 C3 46 0 42 2 38 Z" fill="#F2A93B" fillOpacity="0.4" />
-        <rect x="10" y="0" width="16" height="3" rx="1.5" fill="white" fillOpacity="0.7" />
-      </g>
-
-      {/* Sparkle dots */}
-      <circle cx="155" cy="90" r="5" fill="#F2A93B" fillOpacity="0.8" />
-      <circle cx="310" cy="210" r="4" fill="#4C8C6B" fillOpacity="0.7" />
-      <circle cx="88" cy="230" r="4" fill="#F2A93B" fillOpacity="0.6" />
-      <circle cx="340" cy="170" r="3" fill="white" fillOpacity="0.5" />
-      <circle cx="80" cy="180" r="3" fill="white" fillOpacity="0.4" />
-      <circle cx="260" cy="100" r="5" fill="#4C8C6B" fillOpacity="0.6" />
-      <circle cx="360" cy="310" r="4" fill="#F2A93B" fillOpacity="0.5" />
-      <circle cx="65" cy="340" r="5" fill="#4C8C6B" fillOpacity="0.4" />
+function TeacherIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
     </svg>
   );
 }
