@@ -346,7 +346,7 @@ export default function EnquirySection() {
             }`}
           >
             <StudentTabIcon className="w-4 h-4" />
-            I Need a Tutor
+            As Student / Parents
           </button>
           <button
             onClick={() => setActiveTab("tutor")}
@@ -357,7 +357,7 @@ export default function EnquirySection() {
             }`}
           >
             <TutorTabIcon className="w-4 h-4" />
-            I Want to Tutor
+            As Tutor / Teacher
           </button>
         </div>
 

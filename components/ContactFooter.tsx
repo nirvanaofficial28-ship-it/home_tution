@@ -44,7 +44,7 @@ export default function ContactFooter() {
             </div>
 
             {/* Phone */}
-            <div className="flex items-start gap-4">
+            {/* <div className="flex items-start gap-4">
               <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                 <PhoneIcon className="w-5 h-5 text-accent" />
               </div>
@@ -59,10 +59,10 @@ export default function ContactFooter() {
                   +91 {SITE_CONFIG.phone}
                 </a>
               </div>
-            </div>
+            </div> */}
 
             {/* WhatsApp */}
-            <div className="flex items-start gap-4">
+            {/* <div className="flex items-start gap-4">
               <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                 <WhatsAppIcon className="w-5 h-5 text-whatsapp" />
               </div>
@@ -79,7 +79,7 @@ export default function ContactFooter() {
                   +91 {SITE_CONFIG.phone}
                 </a>
               </div>
-            </div>
+            </div> */}
 
             {/* Email */}
             <div className="flex items-start gap-4">
