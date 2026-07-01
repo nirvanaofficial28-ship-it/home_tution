@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { SITE_CONFIG } from "@/lib/site.config";
 
 const hindiQuotes = [
@@ -95,14 +96,14 @@ export default function Hero() {
                 className="flex items-center justify-center gap-2 bg-accent hover:bg-accent-dark text-white font-semibold px-6 py-3.5 rounded-xl transition-colors duration-200 text-base shadow-lg"
               >
                 <StudentIcon className="w-5 h-5 flex-shrink-0" />
-                I Need a Tutor
+                As Student/Parents
               </a>
               <a
                 href="#enquire"
                 className="flex items-center justify-center gap-2 bg-white/15 hover:bg-white/25 border border-white/30 text-white font-semibold px-6 py-3.5 rounded-xl transition-colors duration-200 text-base"
               >
                 <TeacherIcon className="w-5 h-5 flex-shrink-0" />
-                I Want to Tutor
+                As Tutor/Teacher
               </a>
             </div>
 
@@ -135,74 +136,25 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* ── Illustration ── */}
+          {/* ── Photo ── */}
           <div
             className="hero-right hidden md:flex justify-center items-center"
             style={{ animationDelay: "150ms" }}
           >
             <div className="hero-float">
-              <PlatformIllustration />
+              <Image
+                src="/hero-photo.jpg"
+                alt="Nirvana Home Tuition Centre — tutor with students in Motihari"
+                width={520}
+                height={520}
+                className="w-full max-w-sm lg:max-w-md drop-shadow-2xl"
+                priority
+              />
             </div>
           </div>
         </div>
       </div>
     </section>
-  );
-}
-
-function PlatformIllustration() {
-  return (
-    <svg viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg"
-      className="w-full max-w-sm lg:max-w-md drop-shadow-xl" aria-hidden="true">
-      <circle cx="210" cy="210" r="190" fill="white" fillOpacity="0.04" />
-      <circle cx="210" cy="210" r="155" fill="white" fillOpacity="0.04" />
-
-      {/* Central node */}
-      <circle cx="210" cy="210" r="36" fill="#F2A93B" fillOpacity="0.2" />
-      <circle cx="210" cy="210" r="22" fill="#F2A93B" fillOpacity="0.9" />
-      <path d="M200 210 h20 M210 200 v20" stroke="white" strokeWidth="3" strokeLinecap="round" />
-
-      {/* Student node (left) */}
-      <circle cx="90" cy="210" r="44" fill="white" fillOpacity="0.08" />
-      <circle cx="90" cy="210" r="30" fill="#4C8C6B" fillOpacity="0.85" />
-      <circle cx="90" cy="202" r="8" fill="white" fillOpacity="0.9" />
-      <path d="M72 226 C72 218 80 213 90 213 C100 213 108 218 108 226" fill="white" fillOpacity="0.9" />
-      <rect x="52" y="248" width="76" height="22" rx="11" fill="white" fillOpacity="0.12" />
-      <text x="90" y="263" textAnchor="middle" fill="white" fontSize="10" fontWeight="600" opacity="0.9">STUDENT</text>
-
-      {/* Tutor node (right) */}
-      <circle cx="330" cy="210" r="44" fill="white" fillOpacity="0.08" />
-      <circle cx="330" cy="210" r="30" fill="#1F3A5F" fillOpacity="0.9" stroke="white" strokeWidth="1.5" strokeOpacity="0.3" />
-      <ellipse cx="330" cy="208" rx="14" ry="4" fill="white" fillOpacity="0.9" />
-      <path d="M330 196 L344 208 L316 208 Z" fill="white" fillOpacity="0.85" />
-      <circle cx="330" cy="194" r="3" fill="#F2A93B" />
-      <rect x="296" y="248" width="68" height="22" rx="11" fill="white" fillOpacity="0.12" />
-      <text x="330" y="263" textAnchor="middle" fill="white" fontSize="10" fontWeight="600" opacity="0.9">TUTOR</text>
-
-      {/* Connection lines */}
-      <line x1="120" y1="210" x2="172" y2="210" stroke="white" strokeWidth="2" strokeOpacity="0.3" strokeDasharray="5 4" />
-      <line x1="248" y1="210" x2="300" y2="210" stroke="white" strokeWidth="2" strokeOpacity="0.3" strokeDasharray="5 4" />
-
-      {/* Subject bubbles */}
-      {([
-        { cx: 210, cy: 105, label: "Maths" },
-        { cx: 140, cy: 140, label: "Science" },
-        { cx: 280, cy: 140, label: "English" },
-        { cx: 150, cy: 290, label: "Hindi" },
-        { cx: 270, cy: 290, label: "Social" },
-        { cx: 210, cy: 320, label: "Commerce" },
-      ] as const).map((b) => (
-        <g key={b.label}>
-          <circle cx={b.cx} cy={b.cy} r="24" fill="white" fillOpacity="0.08" />
-          <text x={b.cx} y={b.cy + 4} textAnchor="middle" fill="white" fontSize="9" fontWeight="500" opacity="0.7">{b.label}</text>
-        </g>
-      ))}
-
-      <circle cx="60" cy="130" r="4" fill="#F2A93B" fillOpacity="0.7" />
-      <circle cx="360" cy="300" r="5" fill="#4C8C6B" fillOpacity="0.6" />
-      <circle cx="355" cy="130" r="3" fill="white" fillOpacity="0.5" />
-      <circle cx="65" cy="310" r="4" fill="#F2A93B" fillOpacity="0.5" />
-    </svg>
   );
 }
 
