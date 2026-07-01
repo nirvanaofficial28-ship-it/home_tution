@@ -138,7 +138,7 @@ export default function Hero() {
 
           {/* ── Photo ── */}
           <div
-            className="hero-right hidden md:flex justify-center items-center"
+            className="hero-right flex justify-center items-center"
             style={{ animationDelay: "150ms" }}
           >
             <div className="hero-float">
@@ -147,7 +147,7 @@ export default function Hero() {
                 alt="Nirvana Home Tuition Centre — tutor with students in Motihari"
                 width={520}
                 height={520}
-                className="w-full max-w-sm lg:max-w-md drop-shadow-2xl"
+                className="w-full max-w-[260px] sm:max-w-sm lg:max-w-md drop-shadow-2xl"
                 priority
               />
             </div>
