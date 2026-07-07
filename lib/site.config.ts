@@ -38,7 +38,6 @@ export const SITE_CONFIG = {
     // PLACEHOLDER — add actual OG image (1200x630 px) to /public/og-image.jpg
     ogImage: "/og-image.jpg",
 
-    // PLACEHOLDER — update with actual domain before going live
-    siteUrl: "https://nirvanatuition.in",
+    siteUrl: "https://www.nirvanacoaching.co.in",
   },
 } as const;
